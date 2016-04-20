@@ -45,7 +45,7 @@ println "	UCD Component Name: " + componentName
 println "Done"
 
 def skytapRESTClient = new RESTClient(serverURL)
-skytapRESTClient.defaultRequestHeaders.'Authorization: Basic' = encodedAuthString
+skytapRESTClient.defaultRequestHeaders.'Authorization' = 'Basic ' + encodedAuthString
 skytapRESTClient.defaultRequestHeaders.'Accept' = "application/json"
 skytapRESTClient.defaultRequestHeaders.'Content-Type' = "application/json"
 

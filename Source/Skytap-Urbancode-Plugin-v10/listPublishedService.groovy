@@ -44,7 +44,7 @@ println "	Proxy Port: " + proxyPort
 println "Done"
 
 def skytapRESTClient = new RESTClient('https://cloud.skytap.com/')
-skytapRESTClient.defaultRequestHeaders.'Authorization: Basic' = encodedAuthString
+skytapRESTClient.defaultRequestHeaders.'Authorization' = 'Basic ' + encodedAuthString
 skytapRESTClient.defaultRequestHeaders.'Accept' = "application/json"
 skytapRESTClient.defaultRequestHeaders.'Content-Type' = "application/json"
 if (proxyHost) {
